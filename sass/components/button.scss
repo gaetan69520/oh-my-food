@@ -1,0 +1,124 @@
+
+.button-pink {
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    /* Shadow/Button */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    border: var(--filtrer-b-color);
+    height: 50px;
+    align-items: center;
+    display: inline-flex;
+    text-align: center;
+&:hover {
+   opacity: 0.7;
+}
+&.p {
+    color: var(--filtrer-b-color);
+    padding: 13px 18px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+}
+
+.fonctionnement {
+    display: grid;
+    gap: 25px;
+    padding: 48px 20px 68px 20px;
+&.__container.fa-solid {
+    margin-left: 20px;
+}
+&.__button {
+    display: flex;
+    align-items: baseline;
+    background: var(--main-bg-color);
+    /* Shadow/Instructions */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    border: var(--filtrer-b-color);
+    gap: 27px;
+    width: 100%;
+}}
+.Fonction-2::after {
+    content: "2";
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-bg-color);
+    background-color: #9356DC;
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+    left: -12px;
+}
+
+.Fonction-2 {
+    position: relative;
+}
+
+.Fonction-1::after {
+    content: "1";
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-bg-color);
+    background-color: #9356DC;
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+    left: -12px;
+}
+
+.Fonction-1 {
+    position: relative;
+}
+
+.Fonction-3::after {
+    content: "3";
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-bg-color);
+    background-color: #9356DC;
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+    left: -12px;
+}
+
+.Fonction-3 {
+    position: relative;
+}
+@media (min-width: 1024px){
+    .Fonction-1 {
+        width: 33%;
+    }}
+    @media (min-width: 1024px){
+    .Fonction-1::after {
+        top: 26px;
+    }}
+    @media (min-width: 1024px){
+    .Fonction-2 {
+        width: 33%;
+    }}
+    @media (min-width: 1024px){
+    .Fonction-2::after {
+        top: 26px;
+    }}
+    @media (min-width: 1024px){
+    .Fonction-3 {
+        width: 33%;
+    }}
+    @media (min-width: 1024px){
+    .Fonction-3::after {
+        top: 26px;
+    }}

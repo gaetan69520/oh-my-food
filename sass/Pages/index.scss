@@ -1,0 +1,252 @@
+* {
+    /* font-family:'Raleway', sans-serif;*/
+    font-family: 'roboto', sans-serif;
+}
+
+:root {
+    --main-color: #9356DC;
+    --main-bg-color: #F7F7F7;
+    --filter-bg-color: #D2D2D2;
+    --main-b-color: black;
+    --filtrer-b-color: white;
+    --filtrer-bbg-color: #353535;
+    --main-bgg-color: #EAEAEA;
+    --main-d-color: #99E2D0;
+    --filtrer-d-color: #008766;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+}
+p {
+    font-style: normal;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+}
+h1 {
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--main-b-color);
+    @media (min-width: 1024px) {
+        h1 {
+            font-size: 40px;
+            font-weight: 700px;
+        }
+}}
+h2 {
+    font-style: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+h3 {
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+&.card__title {
+    font-size: 18px;
+    line-height: 21px;
+}
+}
+a {
+    text-decoration: none;
+    color: var(--main-b-color);
+}
+.text-align {
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+& .a {
+    color: var(--filtrer-b-color);
+    width: 186px;
+}
+& .button-pink {
+    display: grid;
+}}
+.prix {
+    font-weight: 700;
+}
+
+main {
+    display: block;
+}
+section {
+    display: block;
+}
+
+footer {
+    background: var(--filtrer-bbg-color);
+    padding: 22px 25px;
+&.h3 {
+    color: var(--filtrer-b-color);
+    font-size: 16px;
+    line-height: 19px;
+    margin: 7px 0px 0px 0px;
+}
+&.p {
+    color: var(--filtrer-b-color);
+    font-size: 16px;
+    line-height: 19px;
+    margin: 7px 0px 0px 0px;
+}
+&.img-ohmyfood {
+    width: 137.58px;
+    height: 27px;
+    color: var(--filtrer-b-color);
+    padding: 10px 0px;
+}}
+.img-ohmyfood {
+    height: 36px;
+    width: 197px;
+    display: block;
+    margin: 14px auto 5px auto;
+    padding: 0;
+}
+.localisation-header {
+    display: flex;
+    justify-content: center;
+    background: var(--main-bgg-color);
+    gap: 17px;
+
+&.p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}}
+.fa-solid {
+    font-weight: 900;
+    align-items: center;
+
+}
+.fond-color {
+    background: var(--main-bg-color);
+    text-align: center;
+    padding: 39px 26px 57px 34px;
+}
+.fa-solid::after {
+    color: white;
+    background-color: white;
+}
+.fa-store::before {
+    color: var(--main-color);
+}
+
+.card__logo
+.fa-solid
+{
+    z-index:2;
+    color: var(--main-color);
+    opacity: 0;
+&.fa-regular {
+    position: relative;
+    color: black;
+    z-index:1 ;
+}
+&.fa-solid:hover{
+   transition: ease-in-out;
+     opacity: 1;
+}
+.fa-heart::before{
+    right: 2px;
+    position: absolute;
+}
+}
+.end__footer 
+&.h2 {
+    font-family: 'Shrikhand';
+    font-style: italic;
+    line-height: 26px;
+    color: var(--main-bg-color);
+&.h3 {
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+}
+&.p {
+    font-size: 16px;
+    line-height: 19px;
+}}
+
+.fa-utensils:before {
+    padding-right: 11px;
+}
+.fa-handshake-angle:before {
+    padding-right: 11px;
+}
+.fonctionnement__container {
+    display: grid;
+    gap: 25px;
+    @media (min-width: 1024px){
+        .fonctionnement__container {
+            display: flex;
+            gap: 30px;
+        }}
+}
+.end__block {
+    display: block;
+}
+
+@media (min-width: 1024px) {
+    .img-ohmyfood {
+        margin: 30px auto;
+    }
+}
+
+    @media (min-width: 1024px){
+    .fonctionnement {
+        display: grid;
+        padding: 50px 190px;
+    }}
+   
+    @media (min-width: 1024px){
+    .fa-solid {
+        margin-left: 20px;
+    }}
+    @media (min-width: 1024px){
+    .end__block {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: baseline;
+    }}
+    @media (min-width: 1024px){
+    .end__block-2 {
+        display: flex;
+        align-items: baseline;
+    }}
+    @media (min-width: 1024px){
+    footer {
+        padding: 57px 30px 30px 0px;
+    }}
+    @media (min-width: 1024px){
+    .end__footer h2 {
+        padding-left: 16px;
+        margin: 16px;
+    }}
+    
+    @media (min-width: 1024px){
+    .end__footer p {
+        font-weight: 400;
+        font-size: 16px;
+        margin: 10px;
+    }}
+    @media (min-width: 1024px){
+    footer h3 {
+        margin: 10px;
+    }}
+    
+    @media (min-width: 1024px){
+    .Restaurants {
+        padding: 80px 180px 30px 180px;
+    }
+}
