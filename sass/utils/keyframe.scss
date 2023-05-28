@@ -1,0 +1,20 @@
+@keyframes loader{
+    100% {
+            transform: scaley(0);
+        }
+        0% {
+            transform: scaley(1);
+        }
+    }
+
+    @keyframes check-mark-button__appear {
+        from {
+            opacity: 0;
+            margin-right: -4rem;
+        }
+        to {
+            opacity: 1;
+            margin-right: 0;
+        }
+    }
+    

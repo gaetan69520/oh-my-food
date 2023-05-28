@@ -1,46 +1,73 @@
-.loader-container{
-    position: absolute;
-    background: #f1f1f1;
-    width: 100%;
+.loader-container {
+    position: fixed;
+    background-color: #FFFFFF;
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: opacity 1s ease-in-out;
-    }
-    .dot{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: #000;
-        margin: 0 15px;
-        animation: loader 0.3s infinite  alternate;
-    }
-    .d2{
-    animation-delay: 0.05s; 
-    }
-    .d3{
-        animation-delay: 0.1s; 
-    }
-    @keyframes loader{
-        100%{
-            transform: translateY(-30px);
-        }
-    }
+    inset: 0;
+    z-index: 1;
+    animation: loader 0s 2s forwards;
+    transform-origin: top;
 
-    .navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+}
+.dot{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000;
+    margin: 0 15px;
+   animation: loader infinite 0.3s alternate;
+}
+
+.menu-prix{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    background: #99E2D0;
+    border-radius: 0px 15px 15px 0px;
+    margin-right: -4rem;
+    .card:hover .menu-prix {
+        animation: check-mark-button__appear 0.8s forwards ease-in-out;
     }
-    
-    .navbar p {
-        font-size: 30px;
-        padding: 14px 0px 5px 0px;
+}
+
+.menu-prix i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: #fff;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    color: #99E2D0;
+    .card:hover .menu-prix i {
+        animation: check-mark-button__appear 0.8s forwards ease-in-out;
     }
-    
-    .navbar a {
-        position: absolute;
-        left: 23px;
-    }
-    
+}
+  
+
+
+
+.fa-solid.fa-heart:hover{
+    background-image: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+   transition: color 1s ease-in-out;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+&.p {
+    font-size: 30px;
+    padding: 14px 0px 5px 0px;
+}
+&.a {
+    position: absolute;
+    left: 23px;
+}
+}

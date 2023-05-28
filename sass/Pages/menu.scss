@@ -1,20 +1,3 @@
-.image-de-fond {
-    min-height: 275px;
-    background-size: cover;
-    background-position: center;
-&.-gout {
-    background-image: url(restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-}
-&.-sens {
-    background-image: url(restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-}
-&.-enchante {
-    background-image: url(restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-}
-&.-francais {
-    background-image: url(restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-}}
-
 .menu {
     width: 100%;
     background: var(--main-bg-color);
@@ -26,17 +9,17 @@
     text-overflow: ellipsis;
     overflow:hidden ;
 }
-&.entrees-plats-desserts {
-    display: flex;
-    flex-direction: column;
-    padding: 42px 13px 0px 13px;
-    gap: 40px;
-}
-&.title {
+&.-title {
     display: flex;
     align-items: center;
     padding-top: 32px;
     gap: 50px;
+}
+&.-title .card-logo{
+    display: flex;
+    justify-content: flex-end;
+    top: -10px;
+    position: relative;
 }
 &.h1 {
     font-family: 'Shrikhand';
@@ -46,7 +29,7 @@
     padding-left: 17px;
     margin: 0;
 }
-&.part-title h2 {
+&.-part-title h2 {
     font-weight: 300;
     font-size: 16px;
     border-bottom: 3px solid var(--main-d-color);
@@ -54,43 +37,63 @@
     margin-bottom: 12px;
     width: 40px;
 }
+&.-entrees-plats-desserts {
+    display: flex;
+    flex-direction: column;
+    padding: 42px 13px 0px 13px;
+    gap: 40px;
 }
-.card {
+}
+
+.new p{
+    font-size: 14px;
+}
+.section-menu-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section-menu-cards .card {
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card-content p, .card-content h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+  }
+  .card {
     background: var(--filtrer-b-color);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     border-radius: 15px;
     height: 69px;
-&.__menu {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-&.__menu .card {
-    flex-direction: row;
-    justify-content: space-between;
-    overflow: hidden;
-}
-&.__menu .card .card__content {
-    min-width: 70%;
-}
-&.__content {
-    gap: 5px;
-    width: 98%;
-}
-&.__content h3 {
-    margin: 12px 0px 5px 15px;
-}
-&.__content p {
-    margin: 0px 0px 0px 15px;
-    font-size: 15px;
 }
 
-&.__text {
+.card-content {
+    gap: 5px;
+    width: 100%;
+}
+
+.card-content h3 {
+    margin: 12px 0px 5px 15px;
+}
+
+.card-content p {
+    margin: 0px 0px 0px 15px;
+    font-size: 15px;
+    padding-right: 10px;
+}
+
+.card-text {
     display: flex;
     justify-content: space-between;
 }
-&.__restaurants {
+.cards-restaurants {
     background: var(--filtrer-b-color);
     /* Shadow/Card */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -98,84 +101,43 @@
     width: 100%;
     height: auto;
     position: relative;
-}}
+}
 
-.Restaurants {
-    background: var(--main-bg-color);
-    padding: 54px 15px 66px 15px;
-&.__grille {
+.grille-restaurants {
     margin: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
 }
-&.__cards img {
+
+.cards-restaurants img {
     width: 100%;
     object-fit: cover;
-    height: 124px;
+    height: 180px;
     border-radius: 15px 15px 0px 0px;
 }
-&.__cards .card__title {
+
+.cards-restaurants .card-title {
     font-size: 18px;
     line-height: 21px;
     color: var(--main-b-color);
     padding: 4px 15px;
     margin: 0;
 }
-&.__new {
-    background: var(--main-d-color);
-    width: 80px;
-    height: 29px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2px;
-    color: var(--filtrer-d-color);
-    font-size: 14px;
-    font-weight: 500;
-    right: 5%;
-    top: 5%;
-    position: absolute;
-}
-&.__cards .card__subtitle {
+
+.cards-restaurants .card-subtitle {
     font-size: 17px;
     line-height: 20px;
     padding: 0px 15px;
     margin: 5px 0px 12px 0px;
 }
-&.__cards .card__logo {
+
+.cards-restaurants .card-logo {
     display: flex;
     justify-content: flex-end;
-    top: -40px;
+    top: -50px;
     position: relative;
     right: 25px;
 }
-}
 
-@media (min-width: 1024px){
-    .Restaurants__grille {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 100px;
-    }}
-    @media (min-width: 1024px){
-        .menu {
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-        }}
-        @media (min-width: 1024px){
-        .menu__title {
-            justify-content: center;
-        }}
-        @media (min-width: 1024px){
-        .menu h1 {
-            display: flex;
-            justify-content: center;
-        }}
-        @media (min-width: 1024px){
-        .menus_entrees_plats_desserts {
-            padding: 79px 210px 0px 210px;
-        }}
-    
