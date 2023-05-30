@@ -5,31 +5,65 @@
     margin-top: -40px;
     display: flex;
     flex-direction: column;
-&.p{
+& p{
     text-overflow: ellipsis;
     overflow:hidden ;
 }
-&.-title {
+&-title {
     display: flex;
     align-items: center;
     padding-top: 32px;
     gap: 50px;
+    @media (min-width: 1024px)  {
+        justify-content: center;
+    }
 }
-&.-title .card-logo{
+&-title .card-logo{
     display: flex;
     justify-content: flex-end;
-    top: -10px;
     position: relative;
 }
-&.h1 {
+& h1 {
     font-family: 'Shrikhand';
     font-style: italic;
     font-size: 28px;
     line-height: 41px;
     padding-left: 17px;
     margin: 0;
+    @media (min-width: 1024px)  {
+        display: flex;
+        justify-content: center;
+    }
 }
-&.-part-title h2 {
+@media (min-width: 1024px)  {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+
+.entrees {
+    animation: animation-menu 1.5s;
+  }
+  
+  .plats {
+    animation: animation-menu 2.5s;
+  }
+  
+  .desserts {
+    animation: animation-menu 3.5s;
+  }
+.menus-entrees-plats-desserts {
+    display: flex;
+    flex-direction: column;
+    padding: 42px 13px 0px 13px;
+    gap: 40px;
+    @media (min-width: 1024px)  {
+        padding: 79px 210px 0px 210px;
+    }
+}
+
+.menus-part-title h2 {
     font-weight: 300;
     font-size: 16px;
     border-bottom: 3px solid var(--main-d-color);
@@ -37,62 +71,47 @@
     margin-bottom: 12px;
     width: 40px;
 }
-&.-entrees-plats-desserts {
-    display: flex;
-    flex-direction: column;
-    padding: 42px 13px 0px 13px;
-    gap: 40px;
-}
-}
 
-.new p{
-    font-size: 14px;
-}
+
 .section-menu-cards {
     display: flex;
     flex-direction: column;
     gap: 12px;
-}
-
-.section-menu-cards .card {
+& .card {
     flex-direction: row;
     justify-content: space-between;
     overflow: hidden;
 }
+}
 
-.card-content p, .card-content h3 {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 80%;
-  }
-  .card {
+.card {
     background: var(--filtrer-b-color);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     display: flex;
     border-radius: 15px;
     height: 69px;
-}
-
-.card-content {
+&-content {
     gap: 5px;
     width: 100%;
-}
-
-.card-content h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+   }
+&-content h3 {
     margin: 12px 0px 5px 15px;
 }
-
-.card-content p {
+&-content p {
     margin: 0px 0px 0px 15px;
     font-size: 15px;
     padding-right: 10px;
 }
-
-.card-text {
+&-text {
     display: flex;
     justify-content: space-between;
 }
+  }
+
+
 .cards-restaurants {
     background: var(--filtrer-b-color);
     /* Shadow/Card */
@@ -101,43 +120,50 @@
     width: 100%;
     height: auto;
     position: relative;
-}
-
-.grille-restaurants {
-    margin: 0 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.cards-restaurants img {
+& img {
     width: 100%;
     object-fit: cover;
     height: 180px;
     border-radius: 15px 15px 0px 0px;
 }
-
-.cards-restaurants .card-title {
+& .card-title {
     font-size: 18px;
     line-height: 21px;
     color: var(--main-b-color);
     padding: 4px 15px;
     margin: 0;
 }
-
-.cards-restaurants .card-subtitle {
+& .card-subtitle {
     font-size: 17px;
     line-height: 20px;
     padding: 0px 15px;
-    margin: 5px 0px 12px 0px;
+    margin: 5px 0px 0px 0px;
 }
-
-.cards-restaurants .card-logo {
+& .card-logo {
     display: flex;
     justify-content: flex-end;
-    top: -50px;
+    top: -40px;
     position: relative;
     right: 25px;
 }
+}
 
+.restaurants {
+    background: var(--main-bg-color);
+    padding: 54px 15px 66px 15px;
+    @media (min-width: 1024px)  {
+        padding: 80px 180px 30px 180px;
+    }
+}
+    .grille-restaurants {
+        margin: 0 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        @media (min-width: 1024px)  {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 100px;
+        }
+    }

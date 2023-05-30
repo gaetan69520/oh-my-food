@@ -8,7 +8,7 @@
     align-items: center;
     display: inline-flex;
     text-align: center;
-&.p {
+& p {
     color: var(--filtrer-b-color);
     padding: 13px 18px;
     font-size: 16px;
@@ -32,4 +32,17 @@
     border: var(--filtrer-b-color);
     gap: 27px;
     width: 100%;
+    @media (min-width: 1024px) {
+        justify-content: initial;
+    }
+    @media (min-width: 1024px){
+    & h3 {
+        padding: 10px 0px;
+    }
 }
+& .fa-solid{
+    color: darkgray;
+}
+}
+
+

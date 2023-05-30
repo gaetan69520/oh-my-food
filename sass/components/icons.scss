@@ -1,0 +1,119 @@
+
+.fonction  {
+    display: grid;
+    gap: 25px;
+    @media (min-width: 1024px) {
+        display: flex;
+        gap: 30px;
+    }
+    & .fa-solid {
+        margin-left: 20px;
+        @media (min-width: 1024px)   {
+            margin-left: 20px;
+        }
+    }
+&-1 {
+    position: relative;
+&:after {
+    content: "1";
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-bg-color);
+    background-color: #9356DC;
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+    left: -12px;
+}
+@media (min-width: 1024px) {
+    width: 33%;
+}
+@media (min-width: 1024px) {&:after {
+    top: 26px;
+}
+}
+}
+&-2 {
+    position: relative;
+&:after {
+    content: "2";
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-bg-color);
+    background-color: #9356DC;
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+    left: -12px;
+}
+@media (min-width: 1024px) {
+    width: 33%;
+}
+@media (min-width: 1024px) {&:after {
+    top: 26px;
+}
+}
+}
+&-3 {
+    position: relative;
+&:after {
+    content: "3";
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-bg-color);
+    background-color: #9356DC;
+    font-size: 14px;
+    position: absolute;
+    top: 16px;
+    left: -12px;
+}
+@media (min-width: 1024px)  {
+    width: 33%;
+}
+@media (min-width: 1024px) {&:after {
+    top: 26px;
+}
+}
+}
+}
+.fa-heart{
+    font-size: 25px;
+  }
+  .fa-utensils:before {
+    padding-right: 11px;
+}
+
+.fa-handshake-angle:before {
+    padding-right: 11px;
+}
+.fa-store::before {
+    color: var(--main-color);
+}
+.fa-solid {
+    font-weight: 900;
+    align-items: center;
+
+}
+.localisation-header {
+    display: flex;
+    justify-content: center;
+    background: var(--main-bgg-color);
+    gap: 17px;
+& p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+}

@@ -40,6 +40,10 @@ h1 {
     font-size: 24px;
     line-height: 28px;
     color: var(--main-b-color);
+    @media (min-width: 1024px) {
+        font-size: 40px;
+        font-weight: 700px;
+    }
 }
 
 h2 {
@@ -60,25 +64,26 @@ a {
     color: var(--main-b-color);
 }
 
-.text-align a {
-    color: var(--filtrer-b-color);
-    width: 186px;
-}
 
 h3 .card-title {
     font-size: 18px;
     line-height: 21px;
 }
 
-.text-align .button-pink {
-    display: grid;
-}
-
 .text-align {
     display: flex;
     padding: 40px;
     justify-content: center;
+& a {
+    color: var(--filtrer-b-color);
+    width: 186px;
 }
+}
+
+.text-align .button-pink {
+    display: grid;
+}
+
 
 .prix {
     font-weight: 700;
@@ -98,6 +103,9 @@ h3 .card-title {
     right: 5%;
     top: 5%;
     position: absolute;
+    & p{
+        font-size: 14px;
+    }
 }
 
 .image-de-fond {
@@ -105,24 +113,19 @@ h3 .card-title {
     background-size: cover;
     background-position: center;
     object-fit: cover;
+&-gout {
+    background-image: url(../../public/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
 }
-
-.image-de-fond-gout {
-    background-image: url(/public/images/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+&-sens {
+   background-image: url(../../public/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg) ;
 }
-
-.image-de-fond-sens {
-    background-image: url(/public/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+&-enchante {
+    background-image: url(../../public/images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
 }
-
-.image-de-fond-enchante {
-    background-image: url(/public/images/stil-u2Lp8tXIcjw-unsplash.jpg);
+&-francais {
+    background-image: url(../../public/images/stil-u2Lp8tXIcjw-unsplash.jpg);
 }
-
-.image-de-fond-francais {
-    background-image: url(/public/images/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
 }
-
 main {
     display: block;
 }
@@ -134,20 +137,24 @@ section {
 footer {
     background: var(--filtrer-bbg-color);
     padding: 22px 25px;
+& h3 {
+    color: var(--filtrer-b-color);
+    font-size: 16px;
+    line-height: 19px;
+    margin: 7px 0px 0px 0px;
+    @media (min-width: 1024px) {
+        margin: 10px;
+    }
 }
-
-footer h3 {
+& p {
     color: var(--filtrer-b-color);
     font-size: 16px;
     line-height: 19px;
     margin: 7px 0px 0px 0px;
 }
-
-footer p {
-    color: var(--filtrer-b-color);
-    font-size: 16px;
-    line-height: 19px;
-    margin: 7px 0px 0px 0px;
+@media (min-width: 1024px) {
+    padding: 57px 30px 30px 0px;
+}
 }
 
 footer .img-ohmyfood {
@@ -163,25 +170,9 @@ footer .img-ohmyfood {
     display: block;
     margin: 14px auto 5px auto;
     padding: 0;
-}
-
-.localisation-header {
-    display: flex;
-    justify-content: center;
-    background: var(--main-bgg-color);
-    gap: 17px;
-}
-
-.localisation-header p {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-}
-
-.fa-solid {
-    font-weight: 900;
-    align-items: center;
-
+    @media (min-width: 1024px) {
+        margin: 30px auto;
+    }
 }
 
 .fond-color {
@@ -190,140 +181,63 @@ footer .img-ohmyfood {
     padding: 39px 26px 57px 34px;
 }
 
-.fond-color2 {
-    background: var(--main-bg-color);
-    padding: 54px 15px 66px 15px;
-}
-
-.grid-fonctionnement {
+.fonctionnement {
     display: grid;
     gap: 25px;
     padding: 48px 20px 68px 20px;
+    @media (min-width: 1024px) {
+        display: grid;
+        padding: 50px 190px;
+    }
 }
-
-.fa-store::before {
-    color: var(--main-color);
-}
-.button-fonctionnement .fa-solid{
-    color: darkgray;
-}
-.flex .fa-solid {
-    margin-left: 20px;
-}
-
-.Fonction-2::after {
-    content: "2";
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--main-bg-color);
-    background-color: #9356DC;
-    font-size: 14px;
-    position: absolute;
-    top: 16px;
-    left: -12px;
-}
-
-.Fonction-2 {
-    position: relative;
-}
-
-.Fonction-1::after {
-    content: "1";
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--main-bg-color);
-    background-color: #9356DC;
-    font-size: 14px;
-    position: absolute;
-    top: 16px;
-    left: -12px;
-}
-
-.Fonction-1 {
-    position: relative;
-}
-
-.Fonction-3::after {
-    content: "3";
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--main-bg-color);
-    background-color: #9356DC;
-    font-size: 14px;
-    position: absolute;
-    top: 16px;
-    left: -12px;
-}
-
-.Fonction-3 {
-    position: relative;
-}
-
-.grid-fonctionnement.fa-regular {
+.fonctionnement.fa-regular {
     position: relative;
     color: darkgray;
     z-index:1 ;
 }
-.fa-heart::before{
-    right: 2px;
-    position: absolute;
-    font-size: 21px;
-}
 
-.card-logo
-.fa-solid
-{
-    z-index:2;
-    color: transparent;
-}
-
-.end-footer h2 {
-    font-family: 'Shrikhand';
-    font-style: italic;
-    line-height: 26px;
-    color: var(--main-bg-color);
-}
-
-.end-footer h3 {
-    font-family: 'Shrikhand';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26px;
-}
-
-.end-footer p {
+.end-footer{
+& p {
     font-size: 16px;
     line-height: 19px;
+    @media (min-width: 1024px)  {
+        font-weight: 400;
+        font-size: 16px;
+        margin: 10px;
+    }
 }
-
-.fa-utensils:before {
-    padding-right: 11px;
-}
-
-.fa-handshake-angle:before {
-    padding-right: 11px;
-}
-
-.flex {
-    display: grid;
-    gap: 25px;
+    & h3 {
+        font-family: 'Shrikhand';
+        font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    & h2 {
+        font-family: 'Shrikhand';
+        font-style: italic;
+        line-height: 26px;
+        color: var(--main-bg-color);
+        @media (min-width: 1024px) {
+            padding-left: 16px;
+            margin: 16px;
+        }
+    }
 }
 
 .block {
     display: block;
+    @media (min-width: 1024px) {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: baseline;
+}
 }
 
- 
+@media (min-width: 1024px) {
+    .block-2 {
+        display: flex;
+        align-items: baseline;
+    }
+   
+}

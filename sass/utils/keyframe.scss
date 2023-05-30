@@ -17,4 +17,33 @@
             margin-right: 0;
         }
     }
-    
+    @keyframes reverse__check-mark-button__appear {
+        from {
+            opacity: 1;
+            margin-right: 0;
+        }
+        to {
+            opacity: 0;
+            margin-right: -4rem;
+        }
+    }
+
+    @keyframes animation-menu {
+        0% {
+          transform: translateX(150px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
+      @keyframes coeur {
+        from {
+            opacity: 1;  
+        }
+        to {
+            opacity: 0;
+        }
+    }
