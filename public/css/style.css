@@ -8,7 +8,7 @@
   align-items: center;
   transition: opacity 1s ease-in-out;
   inset: 0;
-  z-index: 1;
+  z-index: 10;
   animation: loader 0s 2s forwards;
   transform-origin: top;
 }
@@ -56,8 +56,15 @@
   background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
   opacity: 1;
-  transition: opacity 0.4s ease-in-out 0.4s;
+  transition: opacity 0.3s ease-in 0.3s;
+}
+.card-logo .fa-solid:not(:hover) {
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: opacity 0.3s ease-in 0.3s;
 }
 .card-logo .fa-solid {
   color: transparent;
@@ -243,6 +250,18 @@
   align-items: center;
 }
 
+.fa-arrow-left:before {
+  top: 30px;
+  position: relative;
+  left: 10px;
+}
+@media (min-width: 1024px) {
+  .fa-arrow-left:before {
+    top: 60px;
+    left: 20px;
+  }
+}
+
 .localisation-header {
   display: flex;
   justify-content: center;
@@ -264,21 +283,21 @@
   }
 }
 @keyframes check-mark-button__appear {
-  from {
+  0% {
     opacity: 0;
     margin-right: -4rem;
   }
-  to {
+  100% {
     opacity: 1;
     margin-right: 0;
   }
 }
 @keyframes reverse__check-mark-button__appear {
-  from {
+  0% {
     opacity: 1;
     margin-right: 0;
   }
-  to {
+  100% {
     opacity: 0;
     margin-right: -4rem;
   }
@@ -288,17 +307,12 @@
     transform: translateX(150px);
     opacity: 0;
   }
+  12% {
+    opacity: 0;
+  }
   100% {
     transform: translateX(0);
     opacity: 1;
-  }
-}
-@keyframes coeur {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
   }
 }
 * {
@@ -475,12 +489,12 @@ footer .img-ohmyfood {
   height: 36px;
   width: 197px;
   display: block;
-  margin: 14px auto 5px auto;
+  margin: 14px auto 10px auto;
   padding: 0;
 }
 @media (min-width: 1024px) {
   .img-ohmyfood {
-    margin: 30px auto;
+    margin: 30px auto 33px auto;
   }
 }
 
@@ -514,21 +528,24 @@ footer .img-ohmyfood {
 }
 @media (min-width: 1024px) {
   .end-footer p {
+    font-family: "Roboto";
+    font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    margin: 10px;
+    padding: 10px;
   }
 }
 .end-footer h3 {
-  font-family: "Shrikhand";
-  font-style: italic;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 26px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 .end-footer h2 {
   font-family: "Shrikhand";
   font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 26px;
   color: var(--main-bg-color);
 }
@@ -567,6 +584,10 @@ footer .img-ohmyfood {
 .menu p {
   text-overflow: ellipsis;
   overflow: hidden;
+}
+.menu a {
+  font-size: 15px;
+  padding-right: 10px;
 }
 .menu-title {
   display: flex;
@@ -689,21 +710,26 @@ footer .img-ohmyfood {
 .cards-restaurants img {
   width: 100%;
   object-fit: cover;
-  height: 180px;
+  height: 140px;
   border-radius: 15px 15px 0px 0px;
+}
+@media (min-width: 1024px) {
+  .cards-restaurants img {
+    height: 160px;
+  }
 }
 .cards-restaurants .card-title {
   font-size: 18px;
   line-height: 21px;
   color: var(--main-b-color);
-  padding: 4px 15px;
+  padding: 16px 15px 5px 15px;
   margin: 0;
 }
 .cards-restaurants .card-subtitle {
   font-size: 17px;
   line-height: 20px;
   padding: 0px 15px;
-  margin: 5px 0px 0px 0px;
+  margin: 0px;
 }
 .cards-restaurants .card-logo {
   display: flex;

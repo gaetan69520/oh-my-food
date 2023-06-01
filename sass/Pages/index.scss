@@ -168,10 +168,10 @@ footer .img-ohmyfood {
     height: 36px;
     width: 197px;
     display: block;
-    margin: 14px auto 5px auto;
+    margin: 14px auto 10px auto;
     padding: 0;
     @media (min-width: 1024px) {
-        margin: 30px auto;
+        margin: 30px auto 33px auto;
     }
 }
 
@@ -201,21 +201,24 @@ footer .img-ohmyfood {
     font-size: 16px;
     line-height: 19px;
     @media (min-width: 1024px)  {
+        font-family: 'Roboto';
+        font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        margin: 10px;
+        padding: 10px;
     }
 }
     & h3 {
-        font-family: 'Shrikhand';
-        font-style: italic;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 26px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
     }
     & h2 {
         font-family: 'Shrikhand';
         font-style: italic;
+        font-weight: 400;
+        font-size: 18px;
         line-height: 26px;
         color: var(--main-bg-color);
         @media (min-width: 1024px) {

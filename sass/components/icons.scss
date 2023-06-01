@@ -106,6 +106,15 @@
     align-items: center;
 
 }
+.fa-arrow-left:before {
+    top: 30px;
+    position: relative;
+    left: 10px;
+    @media (min-width: 1024px) {
+    top: 60px;
+    left: 20px;
+    }
+}
 .localisation-header {
     display: flex;
     justify-content: center;

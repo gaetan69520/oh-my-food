@@ -8,21 +8,21 @@
     }
 
     @keyframes check-mark-button__appear {
-        from {
+        0% {
             opacity: 0;
             margin-right: -4rem;
         }
-        to {
+        100% {
             opacity: 1;
             margin-right: 0;
         }
     }
     @keyframes reverse__check-mark-button__appear {
-        from {
+        0% {
             opacity: 1;
             margin-right: 0;
         }
-        to {
+        100% {
             opacity: 0;
             margin-right: -4rem;
         }
@@ -33,17 +33,11 @@
           transform: translateX(150px);
           opacity: 0;
         }
+        12%{
+            opacity: 0;
+        }
         100% {
           transform: translateX(0);
           opacity: 1;
         }
       }
-      
-      @keyframes coeur {
-        from {
-            opacity: 1;  
-        }
-        to {
-            opacity: 0;
-        }
-    }
